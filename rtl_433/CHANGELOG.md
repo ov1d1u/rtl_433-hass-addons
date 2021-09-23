@@ -1,3 +1,7 @@
+## [0.1.2.1] - 2021-09-23
+
+- Switched to modded rtl_433 version
+
 ## [0.1.2] - 2021-02-10
 
 - Update add-on config to require USB access per new supervisor config format (thanks to @telegreen and @schorsch3000)

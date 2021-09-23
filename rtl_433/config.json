@@ -1,18 +1,24 @@
 {
   "name": "rtl_433",
-  "version": "0.1.2",
+  "version": "0.1.2.1",
   "slug": "rtl433",
-  "description": "Receive wireless sensor data via an SDR dongle and rtl_433",
-  "url": "https://github.com/pbkhrv/rtl_433-hass-addons/tree/main/rtl_433",
+  "description": "Receive wireless sensor data via MQTT from Sonoff RF bridge and parse with rtl_433",
+  "url": "https://github.com/daemongloom/rtl_433-hass-addons/tree/main/rtl_433",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
   "startup": "application",
   "boot": "auto",
-  "map": ["config"],
-  "usb": true,
   "options": {
-    "rtl_433_conf_file": "rtl_433/rtl_433.conf"
+    "mqtt_host": "hassio",
+    "mqtt_port": 1883,
+    "mqtt_user": "",
+    "mqtt_password": "",
+    "tasmota_topic": "tele/tasmota_XXXXXX/RESULT"
   },
   "schema": {
-    "rtl_433_conf_file": "str"
+    "mqtt_host": "str",
+    "mqtt_port": "int",
+    "mqtt_user": "str",
+    "mqtt_password": "str",
+    "tasmota_topic": "str"
   }
 }

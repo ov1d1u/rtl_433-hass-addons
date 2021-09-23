@@ -3,7 +3,7 @@ FROM $BUILD_FROM
 
 ENV LANG C.UTF-8
 
-MAINTAINER pbkhrv@pm.me
+MAINTAINER daemongloom@gmail.com
 
 # Install latest pip
 RUN python3 -m ensurepip && \
@@ -13,8 +13,8 @@ RUN python3 -m ensurepip && \
 RUN pip3 install --no-cache paho-mqtt
 
 # Clone rtl_433 repo and copy the latest tested version of the mqtt bridge script
-# (latest as of 12/25/2020)
-RUN curl -LO https://github.com/pbkhrv/rtl_433/raw/29c04d8b412eb09f4cd1db4b363050d2d72e9065/examples/rtl_433_mqtt_hass.py && \
+# (latest as of 09/23/2021)
+RUN curl -LO https://github.com/halfbakery/rtl_433/raw/f28d838af7706084df6a830186439e555d3387ba/examples/rtl_433_mqtt_hass.py && \
   chmod +x /rtl_433_mqtt_hass.py
 
 # Run script

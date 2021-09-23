@@ -1,3 +1,7 @@
+## [0.1.8.1] - 2021-09-23
+
+- Switched to modded rtl_433 version
+
 ## [0.1.8] - 2021-05-24
 
 - Add "MQTT retain" flag
