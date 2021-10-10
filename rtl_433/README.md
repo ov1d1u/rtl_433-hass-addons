@@ -23,6 +23,12 @@ Once you get the rtl_433 sensor data into MQTT, you'll need to help Home Assista
  To use this add-on, you need the following:
 
  1. Sonoff RF Bridge with Tasmota and [halfbakery's firmware](https://github.com/halfbakery/RF-Bridge-EFM8BB1/tree/rebaked_sniffer) for EFM8BB1.
+    In order to start sniffing automatically you have to create a rule in Tasmota's console and enable it via commands:
+    ```
+    Rule1 on system#boot do RfRaw 177 endon
+    Rule1 1
+    ```
+    First command creates rule to start RfRaw 177 and second command enables that rule.
 
  2. Home Assistant OS running on a machine with.
 
