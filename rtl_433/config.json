@@ -1,6 +1,6 @@
 {
   "name": "rtl_433",
-  "version": "0.1.2.1",
+  "version": "0.1.2.2",
   "slug": "rtl433",
   "description": "Receive wireless sensor data via MQTT from Sonoff RF bridge and parse with rtl_433",
   "url": "https://github.com/daemongloom/rtl_433-hass-addons/tree/main/rtl_433",
