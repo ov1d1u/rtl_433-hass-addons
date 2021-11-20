@@ -1,6 +1,6 @@
 ARG BUILD_FROM
 FROM $BUILD_FROM as builder
-MAINTAINER daemongloom@gmail.com
+MAINTAINER nitanovidiu@gmail.com
 
 ENV LANG C.UTF-8
 
@@ -13,10 +13,10 @@ RUN apk add --no-cache --virtual .buildDeps \
     git
 
 WORKDIR /build
-RUN git clone https://github.com/halfbakery/rtl_433/
+RUN git clone https://github.com/ov1d1u/rtl_433.git
 WORKDIR ./rtl_433
 
-ARG rtl433GitRevision=f28d838af7706084df6a830186439e555d3387ba
+ARG rtl433GitRevision=a5f3fd6cb02e94a928ec034c2f2fa14f698123b4
 RUN git checkout ${rtl433GitRevision}
 WORKDIR ./build
 RUN cmake ..
